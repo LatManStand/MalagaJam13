@@ -1,0 +1,348 @@
+fileFormatVersion: 2
+guid: f75093c2eda4dd44586f19778361c9fd
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6058699949155764781
+    second: perezoso trabjando layout_0
+  - first:
+      213: 4504827909747622443
+    second: perezoso trabjando layout_1
+  - first:
+      213: 5566000854191328069
+    second: perezoso trabjando layout_2
+  - first:
+      213: -8579627967894878761
+    second: perezoso trabjando layout_3
+  - first:
+      213: 6456161735276759070
+    second: perezoso trabjando layout_4
+  - first:
+      213: -3024301478194673241
+    second: perezoso trabjando layout_5
+  - first:
+      213: -2131823199226321620
+    second: perezoso trabjando layout_6
+  - first:
+      213: 1441677482573872689
+    second: perezoso trabjando layout_7
+  - first:
+      213: -8316549660197799461
+    second: perezoso trabjando layout_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: perezoso trabjando layout_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 844
+        height: 600
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d5b4e12f7c2beba0800000000000000
+      internalID: -6058699949155764781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perezoso trabjando layout_1
+      rect:
+        serializedVersion: 2
+        x: 860
+        y: 13
+        width: 568
+        height: 498
+      alignment: 9
+      pivot: {x: 0.3489711, y: 0.007835178}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b22c5c6cd1d548e30800000000000000
+      internalID: 4504827909747622443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perezoso trabjando layout_2
+      rect:
+        serializedVersion: 2
+        x: 1449
+        y: 358
+        width: 245
+        height: 198
+      alignment: 9
+      pivot: {x: 0.021014528, y: 0.02585255}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 54b489579486e3d40800000000000000
+      internalID: 5566000854191328069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perezoso trabjando layout_3
+      rect:
+        serializedVersion: 2
+        x: 1722
+        y: 359
+        width: 180
+        height: 203
+      alignment: 9
+      pivot: {x: 0.15365194, y: 0.5722611}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d58e9ce1d90fe880800000000000000
+      internalID: -8579627967894878761
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perezoso trabjando layout_4
+      rect:
+        serializedVersion: 2
+        x: 1951
+        y: 347
+        width: 209
+        height: 229
+      alignment: 9
+      pivot: {x: 0.794784, y: 0.5416369}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e1804ab54e4e89950800000000000000
+      internalID: 6456161735276759070
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perezoso trabjando layout_5
+      rect:
+        serializedVersion: 2
+        x: 2189
+        y: 306
+        width: 226
+        height: 266
+      alignment: 9
+      pivot: {x: 0.76287353, y: 0.12776196}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a9848a34d58706d0800000000000000
+      internalID: -3024301478194673241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perezoso trabjando layout_6
+      rect:
+        serializedVersion: 2
+        x: 2776
+        y: 0
+        width: 371
+        height: 600
+      alignment: 9
+      pivot: {x: 0.98346096, y: 0.016496873}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c25ad2e581e3a62e0800000000000000
+      internalID: -2131823199226321620
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perezoso trabjando layout_7
+      rect:
+        serializedVersion: 2
+        x: 3367
+        y: 0
+        width: 833
+        height: 600
+      alignment: 9
+      pivot: {x: 0.9341436, y: 0.040092245}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 13ebe75380ed10410800000000000000
+      internalID: 1441677482573872689
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: perezoso trabjando layout_8
+      rect:
+        serializedVersion: 2
+        x: 1471
+        y: 28
+        width: 577
+        height: 75
+      alignment: 9
+      pivot: {x: 0.49999958, y: 0.042483166}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd9b303a52ea59c80800000000000000
+      internalID: -8316549660197799461
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

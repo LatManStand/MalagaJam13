@@ -67,15 +67,18 @@ public class GameFlow : MonoBehaviour
     {
         if (ammount > 0)
         {
+            if (work.isActive)
+            {
             workDone += ammount * currentEfficiency;
             if (workDone >= workToDo)
             {
                 Debug.Log("Win");
             }
+            }
         }
         else
         {
-            workDone -= ammount;
+            workDone += ammount;
         }
     }
 }
