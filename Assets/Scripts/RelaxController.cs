@@ -9,7 +9,8 @@ public class RelaxController : MonoBehaviour
     {
         if (isActive)
         {
-            GameFlow.instance.currentEfficiency += efficiencyGainPerSecond * Time.deltaTime;
+            GameFlow.instance.currentEfficiency = Mathf.Clamp(GameFlow.instance.currentEfficiency + efficiencyGainPerSecond * Time.deltaTime, GameFlow.minEfficiency, GameFlow.maxEfficiency);
+            //GameFlow.instance.currentEfficiency += efficiencyGainPerSecond * Time.deltaTime;
         }
     }
 

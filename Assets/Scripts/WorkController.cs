@@ -3,13 +3,14 @@ using UnityEngine;
 public class WorkController : MonoBehaviour
 {
     public bool isActive = false;
-    public float efficiencyLossPerSecond = 0.05f;
+    public float efficiencyLossPerSecond = 0.10f;
 
     private void Update()
     {
         if (isActive)
         {
-            GameFlow.instance.currentEfficiency -= efficiencyLossPerSecond * Time.deltaTime;
+            GameFlow.instance.currentEfficiency = Mathf.Clamp(GameFlow.instance.currentEfficiency - efficiencyLossPerSecond * Time.deltaTime, GameFlow.minEfficiency, GameFlow.maxEfficiency);
+            //GameFlow.instance.currentEfficiency -= efficiencyLossPerSecond * Time.deltaTime;
         }
     }
 
