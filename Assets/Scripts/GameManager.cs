@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -17,4 +18,18 @@ public class GameManager : MonoBehaviour
         }
     }
 
+
+    public void LoadScene(int id)
+    {
+        SceneManager.LoadScene(id);
+    }
+
+    public void Quit()
+    {
+#if UNITY_EDITOR
+        UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+    }
 }
