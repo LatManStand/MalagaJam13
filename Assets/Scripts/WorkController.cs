@@ -35,7 +35,12 @@ public class WorkController : MonoBehaviour
 
     public void LoadRoom()
     {
-        Destroy(currentRoom);
+        if(currentRoom != null) {
+            
+            Destroy(currentRoom.gameObject);
+
+        }
+
         int ran = Random.Range(0, rooms.Length);
         currentRoom = Instantiate(rooms[ran]).GetComponent<Room>();
 

@@ -13,7 +13,7 @@ public class FolderController : MonoBehaviour{
 
         if (open && collision.CompareTag("Player")) {
 
-
+            transform.parent.GetComponent<Room>().GoalReached();
 
         }
 
