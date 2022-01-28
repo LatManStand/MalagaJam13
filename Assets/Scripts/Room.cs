@@ -2,15 +2,36 @@ using UnityEngine;
 
 public class Room : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float workOnComplete = 5.0f;
+    public int files = 0;
+    public Transform start;
+
+    private void Awake()
     {
-        
+        foreach (Transform t in transform)
+        {
+            if (t.gameObject.GetComponent<FileController>())
+            {
+                files++;
+            }
+        }
+        FindObjectOfType<PlayerController>().startPoint = start;
+        FindObjectOfType<PlayerController>().BackToStart();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void FileTouched()
     {
-        
+        files--;
+        if (files == 0)
+        {
+            Debug.Log("Pasan que cosas");
+            // Desbloquear folder
+        }
     }
+
+    public void GoalReached()
+    {
+        GameFlow.instance.work.LoadRoom();
+    }
+
 }

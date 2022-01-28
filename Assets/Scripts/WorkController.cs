@@ -5,9 +5,12 @@ public class WorkController : MonoBehaviour
     public bool isActive = false;
     public float efficiencyLossPerSecond = 0.10f;
     public GameObject[] rooms;
+    public Room currentRoom;
+
     private void Awake()
     {
         rooms = Resources.LoadAll<GameObject>("Rooms");
+        LoadRoom();
     }
 
     private void Update()
@@ -32,6 +35,9 @@ public class WorkController : MonoBehaviour
 
     public void LoadRoom()
     {
+        Destroy(currentRoom);
+        int ran = Random.Range(0, rooms.Length);
+        currentRoom = Instantiate(rooms[ran]).GetComponent<Room>();
 
     }
 }
