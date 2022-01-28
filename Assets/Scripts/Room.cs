@@ -26,11 +26,15 @@ public class Room : MonoBehaviour
         {
             Debug.Log("Pasan que cosas");
             // Desbloquear folder
+            GetComponentInChildren<FolderController>().OpenFolder();
         }
     }
 
     public void GoalReached()
     {
+
+        GameFlow.instance.AddWork(workOnComplete);
+
         GameFlow.instance.work.LoadRoom();
     }
 
