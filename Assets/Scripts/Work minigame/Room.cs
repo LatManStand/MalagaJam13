@@ -24,8 +24,7 @@ public class Room : MonoBehaviour
         files--;
         if (files == 0)
         {
-            Debug.Log("Pasan que cosas");
-            // Desbloquear folder
+            //Debug.Log("Pasan que cosas");
             GetComponentInChildren<FolderController>().OpenFolder();
         }
     }
