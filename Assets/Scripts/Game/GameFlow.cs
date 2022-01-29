@@ -4,6 +4,8 @@ public class GameFlow : MonoBehaviour
 {
     public static GameFlow instance;
 
+    public CameraPostPRocess postPRocess;
+
     public RelaxController relax;
     public WorkController work;
 
@@ -31,6 +33,7 @@ public class GameFlow : MonoBehaviour
             {
                 work = FindObjectOfType<WorkController>();
             }
+            postPRocess = FindObjectOfType<CameraPostPRocess>();
             work.isActive = true;
         }
         else if (instance != this)
@@ -58,6 +61,7 @@ public class GameFlow : MonoBehaviour
         {
             work.Deactivate();
             officeWork.SetActive(false);
+            postPRocess.enabled = false;
             relax.Activate();
             officeRelax.SetActive(true);
         }
@@ -65,6 +69,7 @@ public class GameFlow : MonoBehaviour
         {
             work.Activate();
             officeWork.SetActive(true);
+            postPRocess.enabled = true;
             relax.Deactivate();
             officeRelax.SetActive(false);
         }
