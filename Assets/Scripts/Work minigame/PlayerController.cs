@@ -28,6 +28,7 @@ public class PlayerController : MonoBehaviour{
     }
 
     void FixedUpdate() {
+        movement.Normalize();
 
         Vector2 totalSpeed = movement * moveSpeed * GameFlow.instance.currentEfficiency * Time.fixedDeltaTime;
 
