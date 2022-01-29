@@ -14,6 +14,8 @@ public class MusicManager : MonoBehaviour
         relax
     }
 
+    public MusicType currentType = MusicType.menu;
+
     public const string MASTER_KEY = "MasterVolume";
     public const string AMBIENT_KEY = "AmbientVolume";
     public const string MUSIC_KEY = "MusicVolume";
@@ -30,6 +32,8 @@ public class MusicManager : MonoBehaviour
     public Slider ambient;
     public Slider music;
     public Slider sfx;
+
+    public float FadeTime;
 
     public static MusicManager instance;
 
@@ -86,21 +90,64 @@ public class MusicManager : MonoBehaviour
 
     public void ChangeMusic(MusicType musicType)
     {
-        menuMusic.Pause();
-        workMusic.Pause();
-        relaxMusic.Pause();
-
-        switch (musicType)
+        if (musicType != currentType)
         {
-            case MusicType.menu:
-                menuMusic.Play();
-                break;
-            case MusicType.work:
-                workMusic.Play();
-                break;
-            case MusicType.relax:
-                relaxMusic.Play();
-                break;
+            menuMusic.Stop();
+            workMusic.Stop();
+            relaxMusic.Stop();
+
+            switch (musicType)
+            {
+                case MusicType.menu:
+                    menuMusic.Play();
+                    break;
+                case MusicType.work:
+                    StopAllCoroutines();
+                    StartCoroutine(nameof(RelaxToWork));
+                    //workMusic.Play();
+                    break;
+                case MusicType.relax:
+                    StopAllCoroutines();
+                    StartCoroutine(nameof(WorkToRelax));
+                    //relaxMusic.Play();
+                    break;
+            }
         }
+    }
+
+    public IEnumerator RelaxToWork()
+    {
+        workMusic.volume = 0.0f;
+        workMusic.Play();
+        float remainingTime = FadeTime;
+        while (remainingTime >= 0.0f)
+        {
+            workMusic.volume += Time.deltaTime / (1.0f / FadeTime);
+            relaxMusic.volume -= Time.deltaTime / (1.0f / FadeTime);
+            remainingTime -= Time.deltaTime;
+            yield return Time.deltaTime;
+        }
+
+        workMusic.volume = 1.0f;
+        relaxMusic.volume = 0.0f;
+        relaxMusic.Stop();
+    }
+
+    public IEnumerator WorkToRelax()
+    {
+        relaxMusic.volume = 0.0f;
+        relaxMusic.Play();
+        float remainingTime = FadeTime;
+        while (remainingTime >= 0.0f)
+        {
+            relaxMusic.volume += Time.deltaTime / (1.0f / FadeTime);
+            workMusic.volume -= Time.deltaTime / (1.0f / FadeTime);
+            remainingTime -= Time.deltaTime;
+            yield return Time.deltaTime;
+        }
+
+        relaxMusic.volume = 1.0f;
+        workMusic.volume = 0.0f;
+        workMusic.Stop();
     }
 }
