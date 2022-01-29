@@ -23,13 +23,23 @@ public class VirusController : MonoBehaviour{
 
     void Start() {
 
-        Destroy(gameObject, lifeTime);
+        
 
     }
 
     void Update() {
 
         transform.Translate(speedX * Time.deltaTime, speedY * Time.deltaTime, 0);
+
+    }
+
+    public void SetVirus(float newSpeedX, float newSpeedY, float newLifeTime) {
+
+        speedX = newSpeedX;
+        speedY = newSpeedY;
+        lifeTime = newLifeTime;
+
+        Destroy(gameObject, lifeTime);
 
     }
 
