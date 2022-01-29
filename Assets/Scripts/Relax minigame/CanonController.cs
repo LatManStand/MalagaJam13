@@ -90,7 +90,7 @@ public class CanonController : MonoBehaviour
         {
             
           currentLaunchForce = maxLaunchForce;
-          Fire();
+          //Fire();
 
         }else if (Input.GetMouseButtonDown(0)){
 
