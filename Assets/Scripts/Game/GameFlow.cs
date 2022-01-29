@@ -7,6 +7,9 @@ public class GameFlow : MonoBehaviour
     public RelaxController relax;
     public WorkController work;
 
+    public GameObject officeRelax;
+    public GameObject officeWork;
+
     public const float minEfficiency = 0.0f;
     public const float maxEfficiency = 1.0f;
     public float currentEfficiency = maxEfficiency;
@@ -54,12 +57,16 @@ public class GameFlow : MonoBehaviour
         if (work.isActive)
         {
             work.Deactivate();
+            officeWork.SetActive(false);
             relax.Activate();
+            officeRelax.SetActive(true);
         }
         else
         {
             work.Activate();
+            officeWork.SetActive(true);
             relax.Deactivate();
+            officeRelax.SetActive(false);
         }
     }
 

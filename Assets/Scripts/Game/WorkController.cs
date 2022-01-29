@@ -35,14 +35,18 @@ public class WorkController : MonoBehaviour
 
     public void LoadRoom()
     {
-        if(currentRoom != null) {
-            
+        int ran = Random.Range(0, rooms.Length);
+        if (currentRoom != null)
+        {
+            while ((rooms[ran].name + "(Clone)") == currentRoom.gameObject.name)
+            {
+                ran = Random.Range(0, rooms.Length);
+            }
+            Debug.Log("Nombres: " + rooms[ran].name + ", " + currentRoom.gameObject.name + ", " + ran);
             Destroy(currentRoom.gameObject);
-
         }
 
-        int ran = Random.Range(0, rooms.Length);
         currentRoom = Instantiate(rooms[ran]).GetComponent<Room>();
-
+        currentRoom.transform.SetParent(gameObject.transform);
     }
 }
