@@ -53,6 +53,7 @@ public class GameFlow : MonoBehaviour
         {
             AddWork(5);
         }
+
     }
 
     public void Switch()
