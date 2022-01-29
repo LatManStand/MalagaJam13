@@ -13,15 +13,18 @@ public class VirusSpawner : MonoBehaviour{
 
     void Start() {
 
-        InvokeRepeating("SpawnVirus",0.5f, spawnRate);
+        InvokeRepeating("SpawnVirus",0.1f, spawnRate);
 
     }
 
 
     private void SpawnVirus() {
 
-        Instantiate(virusPrefab, transform.position, Quaternion.identity).GetComponent<VirusController>().SetVirus(newSpeedX, newSpeedY, newLifeTime);
+        GameObject instanciado;
+        instanciado = Instantiate(virusPrefab, transform.position, Quaternion.identity);
 
+        instanciado.GetComponent<VirusController>().SetVirus(newSpeedX, newSpeedY, newLifeTime);
+        instanciado.transform.SetParent(gameObject.transform);
     }
 
 }
