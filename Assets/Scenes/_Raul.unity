@@ -303,6 +303,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 0
   efficiencyLossPerSecond: 0.1
+  rooms: []
+  currentRoom: {fileID: 0}
 --- !u!4 &591556059
 Transform:
   m_ObjectHideFlags: 0
@@ -417,6 +419,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 8608687961407991811, guid: be1f90307bf4de649be6f66531476548, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8608687961407991811, guid: be1f90307bf4de649be6f66531476548, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
@@ -512,6 +518,10 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 472358240}
+    - target: {fileID: 8608687961713239901, guid: be1f90307bf4de649be6f66531476548, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8608687961713239901, guid: be1f90307bf4de649be6f66531476548, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
