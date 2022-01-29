@@ -4,6 +4,26 @@ using UnityEngine;
 
 public class ProgramController : MonoBehaviour{
 
+    public bool followPath;
+
+
+    [SerializeField]
+    private float moveSpeed = 2f;
+
+    public Transform[] waypoints;
+    public Transform startPoint;
+    private int waypointIndex = 0;
+
+    void Start() {
+
+        if (followPath) {
+
+            transform.position = startPoint.position;
+
+        }
+
+    }
+
 
     void OnTriggerEnter2D(Collider2D collision) {
 
@@ -17,5 +37,34 @@ public class ProgramController : MonoBehaviour{
 
 
 
+
+    void Update() {
+
+        if (followPath) {
+
+            Move();
+        
+        }
+
+    }
+
+
+    private void Move() {
+
+        transform.position = Vector2.MoveTowards(transform.position, waypoints[waypointIndex].transform.position, moveSpeed * Time.deltaTime);
+
+        if(transform.position == waypoints[waypointIndex].transform.position) {
+
+            waypointIndex += 1;
+
+        }
+
+        if(waypointIndex == waypoints.Length) {
+
+            waypointIndex = 0;
+
+        }
+
+    }
 
 }
