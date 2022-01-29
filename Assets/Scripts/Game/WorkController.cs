@@ -6,6 +6,7 @@ public class WorkController : MonoBehaviour
     public float efficiencyLossPerSecond = 0.10f;
     public GameObject[] rooms;
     public Room currentRoom;
+    public Transform officeWork;
 
     private void Awake()
     {
@@ -47,6 +48,6 @@ public class WorkController : MonoBehaviour
         }
 
         currentRoom = Instantiate(rooms[ran]).GetComponent<Room>();
-        currentRoom.transform.SetParent(gameObject.transform);
+        currentRoom.transform.SetParent(officeWork);
     }
 }
