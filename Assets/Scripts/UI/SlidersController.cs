@@ -12,6 +12,7 @@ public class SlidersController : MonoBehaviour
 
     public AudioSource soft;
     public AudioSource hard;
+    public AudioSource breath;
 
     private void Awake()
     {
@@ -22,8 +23,10 @@ public class SlidersController : MonoBehaviour
         work.value = 0.0f;
         soft.Play();
         hard.Play();
+        breath.Play();
         soft.Pause();
         hard.Pause();
+        breath.Pause();
     }
 
     void Update()
@@ -31,6 +34,7 @@ public class SlidersController : MonoBehaviour
         if (!hard.isPlaying && efficiency.value <= 0.25)
         {
             hard.UnPause();
+            breath.UnPause();
         }
         else if (!soft.isPlaying && efficiency.value <= 0.5)
         {
