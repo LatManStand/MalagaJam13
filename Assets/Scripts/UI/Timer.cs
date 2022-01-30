@@ -1,18 +1,45 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class Timer : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    public float TotalTime = 180.0f;
+    public float currentTime = 0.0f;
+
+    public TextMeshProUGUI text;
+
+    private int hours = 9;
+    private int minutes = 0;
+
+    private float relativeness;
+    private float relativeTime;
+
+    private void Awake()
     {
-        
+        relativeness = 480.0f / TotalTime;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        currentTime -= Time.deltaTime;
+        if (currentTime >= TotalTime)
+        {
+            GameFlow.instance.Lose();
+        }
+
+        relativeTime = 540.0f + (currentTime * relativeness);
+
+        hours = (int)relativeTime / 60;
+        minutes = (int)relativeTime % 60;
+
+
+        if (minutes < 9)
+        {
+            text.text = hours + ":0" + minutes;
+        }
+        else
+        {
+            text.text = hours + ":" + minutes;
+        }
     }
 }
