@@ -5990,6 +5990,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2746775070099119002, guid: 391d029043886eb4f895caac0d3e4b37, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746775070635482580, guid: 391d029043886eb4f895caac0d3e4b37, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2746775070905170464, guid: 391d029043886eb4f895caac0d3e4b37, type: 3}
       propertyPath: sfx
       value: 
@@ -6052,6 +6060,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2746775070905170467, guid: 391d029043886eb4f895caac0d3e4b37, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746775071105335342, guid: 391d029043886eb4f895caac0d3e4b37, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2746775071439336884, guid: 391d029043886eb4f895caac0d3e4b37, type: 3}
+      propertyPath: m_PlayOnAwake
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

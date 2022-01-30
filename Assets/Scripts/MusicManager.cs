@@ -57,6 +57,17 @@ public class MusicManager : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    private void Start()
+    {
+        workMusic.Play();
+        workAmbient.Play();
+        relaxMusic.Play();
+        relaxAmbient.Play();
+        workMusic.Pause();
+        workAmbient.Pause();
+        relaxMusic.Pause();
+        relaxAmbient.Pause();
+    }
 
     private void SetSlidersValues()
     {
@@ -126,9 +137,9 @@ public class MusicManager : MonoBehaviour
     public IEnumerator RelaxToWork()
     {
         workMusic.volume = 0.0f;
-        workMusic.Play();
+        workMusic.UnPause();
         workAmbient.volume = 0.0f;
-        workAmbient.Play();
+        workAmbient.UnPause();
         float remainingTime = FadeTime;
         while (remainingTime >= 0.0f)
         {
@@ -144,16 +155,16 @@ public class MusicManager : MonoBehaviour
         workAmbient.volume = 1.0f;
         relaxMusic.volume = 0.0f;
         relaxAmbient.volume = 0.0f;
-        relaxMusic.Stop();
-        relaxAmbient.Stop();
+        relaxMusic.Pause();
+        relaxAmbient.Pause();
     }
 
     public IEnumerator WorkToRelax()
     {
         relaxMusic.volume = 0.0f;
         relaxAmbient.volume = 0.0f;
-        relaxMusic.Play();
-        relaxAmbient.Play();
+        relaxMusic.UnPause();
+        relaxAmbient.UnPause();
         float remainingTime = FadeTime;
         while (remainingTime >= 0.0f)
         {
@@ -169,8 +180,8 @@ public class MusicManager : MonoBehaviour
         relaxAmbient.volume = 1.0f;
         workMusic.volume = 0.0f;
         workAmbient.volume = 0.0f;
-        workMusic.Stop();
-        workAmbient.Stop();
+        workMusic.Pause();
+        workAmbient.Pause();
     }
 
     public void StopAll()
