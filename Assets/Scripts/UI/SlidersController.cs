@@ -10,6 +10,9 @@ public class SlidersController : MonoBehaviour
     public Sprite green;
     public Sprite red;
 
+    public AudioSource soft;
+    public AudioSource hard;
+
     private void Awake()
     {
         efficiency.minValue = GameFlow.minEfficiency;
@@ -17,10 +20,24 @@ public class SlidersController : MonoBehaviour
         efficiency.value = GameFlow.maxEfficiency;
         work.maxValue = GameFlow.workToDo;
         work.value = 0.0f;
+        soft.Play();
+        hard.Play();
+        soft.Pause();
+        hard.Pause();
     }
 
     void Update()
     {
+        if (!hard.isPlaying && efficiency.value <= 0.25)
+        {
+            hard.UnPause();
+        }
+        else if (!soft.isPlaying && efficiency.value <= 0.5)
+        {
+            soft.UnPause();
+        }
+
+
         if (efficiencyFill.sprite == green && efficiency.value <= 0.5)
         {
             efficiencyFill.sprite = red;
