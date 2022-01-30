@@ -43,7 +43,7 @@ public class WorkController : MonoBehaviour
             {
                 ran = Random.Range(0, rooms.Length);
             }
-            Debug.Log("Nombres: " + rooms[ran].name + ", " + currentRoom.gameObject.name + ", " + ran);
+            //Debug.Log("Nombres: " + rooms[ran].name + ", " + currentRoom.gameObject.name + ", " + ran);
             Destroy(currentRoom.gameObject);
         }
 

@@ -1348,6 +1348,30 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8608687961594878948, guid: be1f90307bf4de649be6f66531476548, type: 3}
+      propertyPath: red
+      value: 
+      objectReference: {fileID: 21300000, guid: 01c61d9387dc78c4795bd91b1773d41a, type: 3}
+    - target: {fileID: 8608687961594878948, guid: be1f90307bf4de649be6f66531476548, type: 3}
+      propertyPath: hard
+      value: 
+      objectReference: {fileID: 916733678}
+    - target: {fileID: 8608687961594878948, guid: be1f90307bf4de649be6f66531476548, type: 3}
+      propertyPath: soft
+      value: 
+      objectReference: {fileID: 1457569400}
+    - target: {fileID: 8608687961594878948, guid: be1f90307bf4de649be6f66531476548, type: 3}
+      propertyPath: green
+      value: 
+      objectReference: {fileID: 21300000, guid: dc6a95f0da30e824cba85b180810c6cd, type: 3}
+    - target: {fileID: 8608687961594878948, guid: be1f90307bf4de649be6f66531476548, type: 3}
+      propertyPath: breath
+      value: 
+      objectReference: {fileID: 1168266358}
+    - target: {fileID: 8608687961594878948, guid: be1f90307bf4de649be6f66531476548, type: 3}
+      propertyPath: efficiencyFill
+      value: 
+      objectReference: {fileID: 1718023993}
     - target: {fileID: 8608687961594878949, guid: be1f90307bf4de649be6f66531476548, type: 3}
       propertyPath: m_Name
       value: Canvas
