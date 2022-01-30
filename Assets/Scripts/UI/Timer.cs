@@ -38,7 +38,7 @@ public class Timer : MonoBehaviour
         }
 
 
-        if (minutes < 9)
+        if (minutes < 10)
         {
             text.text = hours + ":0" + minutes;
         }

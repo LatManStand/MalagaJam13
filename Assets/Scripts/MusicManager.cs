@@ -192,9 +192,13 @@ public class MusicManager : MonoBehaviour
     public void StopAll()
     {
         menuMusic.Stop();
-        relaxMusic.Stop();
-        relaxAmbient.Stop();
-        workMusic.Stop();
-        workAmbient.Stop();
+        relaxMusic.Play();
+        relaxMusic.Pause();
+        relaxAmbient.Play();
+        relaxAmbient.Pause();
+        workMusic.Play();
+        workMusic.Pause();
+        workAmbient.Play();
+        workAmbient.Pause();
     }
 }
