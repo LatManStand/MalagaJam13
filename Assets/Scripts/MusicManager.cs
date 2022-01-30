@@ -118,6 +118,11 @@ public class MusicManager : MonoBehaviour
             {
                 case MusicType.menu:
                     menuMusic.Play();
+                    workMusic.Stop();
+                    workAmbient.Stop();
+                    relaxMusic.Stop();
+                    relaxAmbient.Stop();
+
                     break;
                 case MusicType.work:
                     StopAllCoroutines();
