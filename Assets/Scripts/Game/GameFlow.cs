@@ -19,6 +19,9 @@ public class GameFlow : MonoBehaviour
     public float workDone = 0.0f;
     public const float workToDo = 100.0f;
 
+    public GameObject win;
+    public GameObject lose;
+
     private void Awake()
     {
         if (instance == null)
@@ -48,10 +51,6 @@ public class GameFlow : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Switch();
-        }
-        else if (Input.GetKeyDown(KeyCode.Alpha5) && work.isActive)
-        {
-            AddWork(5);
         }
 
     }
@@ -87,7 +86,7 @@ public class GameFlow : MonoBehaviour
                 workDone += ammount * currentEfficiency;
                 if (workDone >= workToDo)
                 {
-                    Debug.Log("Win");
+                    Win();
                 }
             }
         }
@@ -95,5 +94,27 @@ public class GameFlow : MonoBehaviour
         {
             workDone += ammount;
         }
+    }
+
+    public void StopBoth()
+    {
+        MusicManager.instance.StopAll();
+        work.Deactivate();
+        officeWork.SetActive(false);
+        postPRocess.enabled = false;
+        relax.Deactivate();
+        officeRelax.SetActive(false);
+    }
+
+    public void Win()
+    {
+        StopBoth();
+        win.SetActive(true);
+    }
+
+    public void Lose()
+    {
+        StopBoth();
+        lose.SetActive(true);
     }
 }
