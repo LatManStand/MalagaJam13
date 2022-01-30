@@ -48,6 +48,6 @@ public class WorkController : MonoBehaviour
         }
 
         currentRoom = Instantiate(rooms[ran]).GetComponent<Room>();
-        currentRoom.transform.SetParent(officeWork);
+        currentRoom.transform.SetParent(gameObject.transform);
     }
 }

@@ -9,7 +9,7 @@ public class TrashController : MonoBehaviour
 
         if (collision.CompareTag("PaperBall")) {
 
-
+            GameFlow.instance.currentEfficiency += 0.2f;
 
         }
 

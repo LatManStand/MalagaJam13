@@ -16,7 +16,7 @@ public class CanonController : MonoBehaviour
 
     public Image chargeBar;
 
-
+    public Transform parent;
 
     public float minLaunchForce = 10f;
     public float maxLaunchForce = 25f;
@@ -86,13 +86,12 @@ public class CanonController : MonoBehaviour
 
         rotateH = Input.GetAxisRaw("Horizontal");
 
-        if (currentLaunchForce >= maxLaunchForce)
-        {
-            
-          currentLaunchForce = maxLaunchForce;
-          //Fire();
+        if (currentLaunchForce >= maxLaunchForce) {
 
-        }else if (Input.GetMouseButtonDown(0)){
+            currentLaunchForce = maxLaunchForce;
+            //Fire();
+        }
+        if (Input.GetMouseButtonDown(0)){
 
             currentLaunchForce = minLaunchForce;
 
@@ -105,7 +104,6 @@ public class CanonController : MonoBehaviour
 
             Fire();
 
-
         }
 
 
@@ -114,6 +112,8 @@ public class CanonController : MonoBehaviour
     private void Fire(){
 
         GameObject bulletInstance = Instantiate(bulletPrefab, new Vector2 (fireTransform.position.x, fireTransform.position.y), fireTransform.rotation);
+
+        bulletInstance.transform.SetParent(parent);
 
         Debug.Log(fireTransform.forward);
         

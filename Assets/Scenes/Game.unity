@@ -152,6 +152,7 @@ Transform:
   m_Children:
   - {fileID: 1518607834}
   - {fileID: 1173438262}
+  - {fileID: 1349160003}
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -336,7 +337,7 @@ GameObject:
   - component: {fileID: 602959834}
   - component: {fileID: 602959835}
   m_Layer: 0
-  m_Name: Square
+  m_Name: Arrow
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -395,7 +396,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 26
+  m_SortingOrder: 226
   m_Sprite: {fileID: 21300000, guid: 84fa73d7c1229b14692d269ba6848a0a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -672,6 +673,10 @@ PrefabInstance:
       propertyPath: m_SortingOrder
       value: 335
       objectReference: {fileID: 0}
+    - target: {fileID: 4723826171804142543, guid: 3825c02618c7d2b458c72b58ad6a621d, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 4723826172012928665, guid: 3825c02618c7d2b458c72b58ad6a621d, type: 3}
       propertyPath: m_Name
       value: Office relax
@@ -757,6 +762,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8608687961594878948, guid: be1f90307bf4de649be6f66531476548, type: 3}
+      propertyPath: red
+      value: 
+      objectReference: {fileID: 21300000, guid: 01c61d9387dc78c4795bd91b1773d41a, type: 3}
+    - target: {fileID: 8608687961594878948, guid: be1f90307bf4de649be6f66531476548, type: 3}
+      propertyPath: green
+      value: 
+      objectReference: {fileID: 21300000, guid: dc6a95f0da30e824cba85b180810c6cd, type: 3}
+    - target: {fileID: 8608687961594878948, guid: be1f90307bf4de649be6f66531476548, type: 3}
+      propertyPath: efficiencyFill
+      value: 
+      objectReference: {fileID: 1718023993}
     - target: {fileID: 8608687961594878949, guid: be1f90307bf4de649be6f66531476548, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -1019,7 +1036,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1173438262}
   - component: {fileID: 1173438263}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Floor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1193,6 +1210,63 @@ Transform:
   m_Father: {fileID: 1757156814}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1349160002
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1349160003}
+  - component: {fileID: 1349160004}
+  m_Layer: 7
+  m_Name: Wall
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1349160003
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349160002}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
+  m_LocalPosition: {x: 30.66, y: 14.47, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 88578350}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
+--- !u!61 &1349160004
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1349160002}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: f4269d8cc8bbfd847b49762b33822841, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: -1.9141045, y: 0.03987789}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 65.12258, y: 1.0797558}
+  m_EdgeRadius: 0
 --- !u!1 &1396213264 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4723826171718157783, guid: 3825c02618c7d2b458c72b58ad6a621d, type: 3}
@@ -1219,6 +1293,7 @@ MonoBehaviour:
   fireTransform: {fileID: 1064645592}
   rotationSpeed: 50
   chargeBar: {fileID: 0}
+  parent: {fileID: 88578350}
   minLaunchForce: 10
   maxLaunchForce: 25
   maxChargeTime: 1
@@ -1411,6 +1486,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1718023993 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8608687961407991810, guid: be1f90307bf4de649be6f66531476548, type: 3}
+  m_PrefabInstance: {fileID: 1028033145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1757156813
 GameObject:
   m_ObjectHideFlags: 0
@@ -1754,6 +1840,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2628957704086674217, guid: 8a18a846ad48dc64ebbee77091f35661, type: 3}
+      propertyPath: efficiencyGainPerSecond
+      value: 0.01
+      objectReference: {fileID: 0}
     - target: {fileID: 2628957704086674222, guid: 8a18a846ad48dc64ebbee77091f35661, type: 3}
       propertyPath: m_Name
       value: RelaxController
@@ -1890,7 +1980,7 @@ PrefabInstance:
       objectReference: {fileID: 1757156814}
     - target: {fileID: 8212947927870282247, guid: 696accffc03d68f4b9f076f0f6c9ad9d, type: 3}
       propertyPath: efficiencyLossPerSecond
-      value: 0.01
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: 8212947927870282360, guid: 696accffc03d68f4b9f076f0f6c9ad9d, type: 3}
       propertyPath: m_Name

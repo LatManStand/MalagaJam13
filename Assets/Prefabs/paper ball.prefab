@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5104814227773776751}
   - component: {fileID: 1571822500903655846}
   - component: {fileID: 6400431808704496500}
+  - component: {fileID: 7129666661474034005}
   m_Layer: 6
   m_Name: paper ball
   m_TagString: PaperBall
@@ -72,7 +73,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 11
+  m_SortingOrder: 211
   m_Sprite: {fileID: 8536110520365005773, guid: ae2f7527218529e4ab77b3149cd26925, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -121,3 +122,16 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &7129666661474034005
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5104814227773776748}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bc97fa47dd98ce4d954e37d0c250bfb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 6400431808704496500}

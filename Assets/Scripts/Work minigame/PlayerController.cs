@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour{
     void FixedUpdate() {
         movement.Normalize();
 
-        Vector2 totalSpeed = movement * moveSpeed * GameFlow.instance.currentEfficiency * Time.fixedDeltaTime;
+        Vector2 totalSpeed = movement * moveSpeed * Mathf.Sqrt(GameFlow.instance.currentEfficiency)* Time.fixedDeltaTime;
 
         if (GameFlow.instance.work.isActive) {
 
