@@ -31,14 +31,22 @@ public class SlidersController : MonoBehaviour
 
     void Update()
     {
-        if (!hard.isPlaying && efficiency.value <= 0.25)
+        if (!hard.isPlaying && efficiency.value <= 0.25f)
         {
             hard.UnPause();
             breath.UnPause();
         }
-        else if (!soft.isPlaying && efficiency.value <= 0.5)
+        else if (!soft.isPlaying && efficiency.value <= 0.5f)
         {
+            hard.Pause();
+            breath.Pause();
             soft.UnPause();
+        }
+        else if (soft.isPlaying && efficiency.value > 0.5f)
+        {
+            hard.Pause();
+            breath.Pause();
+            soft.Pause();
         }
 
 
