@@ -108,7 +108,7 @@ public class MusicManager : MonoBehaviour
 
     public void ChangeMusic(MusicType musicType)
     {
-        if (musicType != currentType && musicType != MusicType.work)
+        if (musicType != currentType || musicType == MusicType.work)
         {
             menuMusic.Stop();
             //workMusic.Stop();
