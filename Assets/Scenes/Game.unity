@@ -734,7 +734,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalTime: 180
   currentTime: 0
-  text: {fileID: 0}
+  text: {fileID: 670951308}
 --- !u!4 &445332343
 Transform:
   m_ObjectHideFlags: 0
@@ -908,6 +908,17 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &670951308 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 717202975, guid: be1f90307bf4de649be6f66531476548, type: 3}
+  m_PrefabInstance: {fileID: 1028033145}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &719005417
 GameObject:
   m_ObjectHideFlags: 0
@@ -1463,19 +1474,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 717202973, guid: be1f90307bf4de649be6f66531476548, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 916733677, guid: be1f90307bf4de649be6f66531476548, type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 1168266357, guid: be1f90307bf4de649be6f66531476548, type: 3}
       propertyPath: m_RootOrder
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1457569399, guid: be1f90307bf4de649be6f66531476548, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8608687961322711348, guid: be1f90307bf4de649be6f66531476548, type: 3}
       propertyPath: m_AnchoredPosition.y
