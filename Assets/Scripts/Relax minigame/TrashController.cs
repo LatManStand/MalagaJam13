@@ -7,6 +7,9 @@ public class TrashController : MonoBehaviour
 
     public Transform[] positions;
 
+    public GameObject confettiPrefab;
+    public Transform spawnConfettiPoint;
+    
     void OnTriggerEnter2D(Collider2D collision) {
 
         if (collision.CompareTag("PaperBall")) {
@@ -14,6 +17,8 @@ public class TrashController : MonoBehaviour
             GameFlow.instance.currentEfficiency += 0.2f;
 
             transform.position = positions[Random.Range(0, positions.Length)].position;
+
+            Instantiate(confettiPrefab, spawnConfettiPoint.position, Quaternion.identity);
 
             Destroy(collision.gameObject);
 
