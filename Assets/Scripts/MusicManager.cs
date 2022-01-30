@@ -1,6 +1,4 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
@@ -26,6 +24,8 @@ public class MusicManager : MonoBehaviour
     public AudioSource menuMusic;
     public AudioSource workMusic;
     public AudioSource relaxMusic;
+    public AudioSource workAmbient;
+    public AudioSource relaxAmbient;
 
 
     public Slider master;
@@ -47,6 +47,13 @@ public class MusicManager : MonoBehaviour
         }
         else if (instance != this)
         {
+            instance.master = master;
+            instance.ambient = ambient;
+            instance.music = music;
+            instance.sfx = sfx;
+
+            instance.SetSlidersValues();
+
             Destroy(gameObject);
         }
     }
@@ -124,31 +131,43 @@ public class MusicManager : MonoBehaviour
         while (remainingTime >= 0.0f)
         {
             workMusic.volume += Time.deltaTime / (1.0f / FadeTime);
+            workAmbient.volume += Time.deltaTime / (1.0f / FadeTime);
             relaxMusic.volume -= Time.deltaTime / (1.0f / FadeTime);
+            relaxAmbient.volume -= Time.deltaTime / (1.0f / FadeTime);
             remainingTime -= Time.deltaTime;
             yield return Time.deltaTime;
         }
 
         workMusic.volume = 1.0f;
+        workAmbient.volume = 1.0f;
         relaxMusic.volume = 0.0f;
+        relaxAmbient.volume = 0.0f;
         relaxMusic.Stop();
+        relaxAmbient.Stop();
     }
 
     public IEnumerator WorkToRelax()
     {
         relaxMusic.volume = 0.0f;
+        relaxAmbient.volume = 0.0f;
         relaxMusic.Play();
+        relaxAmbient.Play();
         float remainingTime = FadeTime;
         while (remainingTime >= 0.0f)
         {
             relaxMusic.volume += Time.deltaTime / (1.0f / FadeTime);
+            relaxAmbient.volume += Time.deltaTime / (1.0f / FadeTime);
             workMusic.volume -= Time.deltaTime / (1.0f / FadeTime);
+            workAmbient.volume -= Time.deltaTime / (1.0f / FadeTime);
             remainingTime -= Time.deltaTime;
             yield return Time.deltaTime;
         }
 
         relaxMusic.volume = 1.0f;
+        relaxAmbient.volume = 1.0f;
         workMusic.volume = 0.0f;
+        workAmbient.volume = 0.0f;
         workMusic.Stop();
+        workAmbient.Stop();
     }
 }
