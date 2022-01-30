@@ -52,6 +52,8 @@ public class MusicManager : MonoBehaviour
             instance.music = music;
             instance.sfx = sfx;
 
+            instance.SetSlidersValues();
+
             Destroy(gameObject);
         }
     }
