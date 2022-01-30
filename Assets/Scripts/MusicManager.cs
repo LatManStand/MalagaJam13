@@ -108,30 +108,28 @@ public class MusicManager : MonoBehaviour
 
     public void ChangeMusic(MusicType musicType)
     {
-        if (musicType != currentType)
-        {
-            menuMusic.Stop();
-            //workMusic.Stop();
-            //relaxMusic.Stop();
+        menuMusic.Stop();
+        //workMusic.Stop();
+        //relaxMusic.Stop();
 
-            switch (musicType)
-            {
-                case MusicType.menu:
-                    menuMusic.Play();
-                    break;
-                case MusicType.work:
-                    StopAllCoroutines();
-                    StartCoroutine(nameof(RelaxToWork));
-                    //workMusic.Play();
-                    break;
-                case MusicType.relax:
-                    StopAllCoroutines();
-                    StartCoroutine(nameof(WorkToRelax));
-                    //relaxMusic.Play();
-                    break;
-            }
-            currentType = musicType;
+        switch (musicType)
+        {
+            case MusicType.menu:
+                menuMusic.Play();
+                break;
+            case MusicType.work:
+                StopAllCoroutines();
+                StartCoroutine(nameof(RelaxToWork));
+                //workMusic.Play();
+                break;
+            case MusicType.relax:
+                StopAllCoroutines();
+                StartCoroutine(nameof(WorkToRelax));
+                //relaxMusic.Play();
+                break;
         }
+        currentType = musicType;
+
     }
 
     public IEnumerator RelaxToWork()
