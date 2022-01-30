@@ -544,8 +544,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.080999374}
+  m_SizeDelta: {x: 10, y: -4.526}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8608687961407991809
 CanvasRenderer:
@@ -700,7 +700,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   efficiency: {fileID: 8608687962856621417}
+  efficiencyFill: {fileID: 0}
   work: {fileID: 8608687961322711355}
+  green: {fileID: 0}
+  red: {fileID: 0}
 --- !u!1 &8608687961713239902
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,8 +738,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 10, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0.3729992}
+  m_SizeDelta: {x: 10, y: -4.223}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &8608687961713239875
 CanvasRenderer:
