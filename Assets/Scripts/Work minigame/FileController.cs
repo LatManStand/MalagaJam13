@@ -4,6 +4,7 @@ public class FileController : MonoBehaviour
 {
 
     public float workValue;
+    public GameObject sound;
 
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -18,6 +19,7 @@ public class FileController : MonoBehaviour
             {
                 parentRoom.FileTouched();
             }
+            Destroy(Instantiate(sound), 2f);
 
             Destroy(gameObject);
         }

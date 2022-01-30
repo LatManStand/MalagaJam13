@@ -8,11 +8,11 @@ public class FolderController : MonoBehaviour{
 
     public Sprite openSprite;
 
-
+    public GameObject sound;
     void OnTriggerEnter2D(Collider2D collision) {
 
         if (open && collision.CompareTag("Player")) {
-
+            Destroy(Instantiate(sound), 2f);
             transform.parent.GetComponent<Room>().GoalReached();
 
         }
