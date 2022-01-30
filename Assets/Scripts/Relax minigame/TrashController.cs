@@ -6,7 +6,7 @@ public class TrashController : MonoBehaviour
 {
 
     public Transform[] positions;
-
+    public Transform parent;
     public GameObject confettiPrefab;
     public Transform spawnConfettiPoint;
     
@@ -18,7 +18,8 @@ public class TrashController : MonoBehaviour
 
             transform.position = positions[Random.Range(0, positions.Length)].position;
 
-            Instantiate(confettiPrefab, spawnConfettiPoint.position, Quaternion.identity);
+            GameObject confetti =Instantiate(confettiPrefab, spawnConfettiPoint.position, Quaternion.identity);
+            confetti.transform.SetParent(parent);
 
             Destroy(collision.gameObject);
 
