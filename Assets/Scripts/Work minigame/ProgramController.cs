@@ -30,7 +30,7 @@ public class ProgramController : MonoBehaviour{
         if (collision.CompareTag("Player")) {
 
             collision.GetComponent<PlayerController>().BackToStart();
-
+            GetComponent<AudioSource>().Play();
         }
 
     }

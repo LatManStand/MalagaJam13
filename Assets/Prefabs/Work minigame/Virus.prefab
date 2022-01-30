@@ -69,6 +69,7 @@ MonoBehaviour:
   lifeTime: 5
   speedX: 0
   speedY: -2
+  sound: {fileID: 5278000102279498921, guid: 8df6431d0b2bf4049978e1439e5afbf5, type: 3}
 --- !u!58 &6173881067426192717
 CircleCollider2D:
   m_ObjectHideFlags: 0

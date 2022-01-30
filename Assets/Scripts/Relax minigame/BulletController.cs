@@ -9,6 +9,17 @@ public class BulletController : MonoBehaviour{
     private Vector2 bulletBelocity;
 
 
+    void OnCollisionEnter2D(Collision2D collision) {
+
+        if (collision.gameObject.CompareTag("Floor")) {
+
+            GetComponent<AudioSource>().Play();
+
+        }
+
+    }
+
+
     private void OnDisable() {
 
         bulletBelocity = rb.velocity;
