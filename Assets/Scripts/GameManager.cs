@@ -53,6 +53,9 @@ public class GameManager : MonoBehaviour
         {
             MusicManager.instance.ChangeMusic(MusicManager.MusicType.work);
         }
+
+        Time.timeScale = 1.0f;
+
         SceneManager.LoadScene(id);
     }
 

@@ -104,6 +104,7 @@ public class GameFlow : MonoBehaviour
         postPRocess.enabled = false;
         relax.Deactivate();
         officeRelax.SetActive(false);
+        Time.timeScale = 0.0f;
     }
 
     public void Win()
