@@ -21,7 +21,7 @@ public class Timer : MonoBehaviour
 
     private void Update()
     {
-        currentTime -= Time.deltaTime;
+        currentTime += Time.deltaTime;
         if (currentTime >= TotalTime)
         {
             GameFlow.instance.Lose();
