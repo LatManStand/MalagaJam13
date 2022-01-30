@@ -32,6 +32,11 @@ public class Timer : MonoBehaviour
         hours = (int)relativeTime / 60;
         minutes = (int)relativeTime % 60;
 
+        if (hours >= 16)
+        {
+            text.color = Color.red;
+        }
+
 
         if (minutes < 9)
         {
