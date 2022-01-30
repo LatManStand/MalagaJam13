@@ -93,8 +93,8 @@ public class MusicManager : MonoBehaviour
         if (musicType != currentType)
         {
             menuMusic.Stop();
-            workMusic.Stop();
-            relaxMusic.Stop();
+            //workMusic.Stop();
+            //relaxMusic.Stop();
 
             switch (musicType)
             {
@@ -112,6 +112,7 @@ public class MusicManager : MonoBehaviour
                     //relaxMusic.Play();
                     break;
             }
+            currentType = musicType;
         }
     }
 

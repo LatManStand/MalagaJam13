@@ -21,6 +21,14 @@ public class GameManager : MonoBehaviour
 
     public void LoadScene(int id)
     {
+        if (id == 0)
+        {
+            MusicManager.instance.ChangeMusic(MusicManager.MusicType.menu);
+        }
+        else if (id == 1)
+        {
+            MusicManager.instance.ChangeMusic(MusicManager.MusicType.work);
+        }
         SceneManager.LoadScene(id);
     }
 
