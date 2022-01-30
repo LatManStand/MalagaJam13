@@ -60,6 +60,7 @@ public class GameFlow : MonoBehaviour
     {
         if (work.isActive)
         {
+            MusicManager.instance.ChangeMusic(MusicManager.MusicType.relax);
             work.Deactivate();
             officeWork.SetActive(false);
             postPRocess.enabled = false;
@@ -68,6 +69,7 @@ public class GameFlow : MonoBehaviour
         }
         else
         {
+            MusicManager.instance.ChangeMusic(MusicManager.MusicType.work);
             work.Activate();
             officeWork.SetActive(true);
             postPRocess.enabled = true;
@@ -82,11 +84,11 @@ public class GameFlow : MonoBehaviour
         {
             if (work.isActive)
             {
-            workDone += ammount * currentEfficiency;
-            if (workDone >= workToDo)
-            {
-                Debug.Log("Win");
-            }
+                workDone += ammount * currentEfficiency;
+                if (workDone >= workToDo)
+                {
+                    Debug.Log("Win");
+                }
             }
         }
         else
