@@ -1955,7 +1955,7 @@ MonoBehaviour:
     them to the correct folder (WASD).\n\nThe more you work, the slower you'll move.
     To recover your energy, press SPACE to relax yourself. To relax, throw paperballs
     at the trash bin by using your MOUSE. But don't relax too much! \n\nIf you don't
-    finish your work on time, you'll get fired! Good luck ;)"
+    finish your work by 17:00, you'll get fired! Good luck ;)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: a771ee4e0fa6f6c48a5db5cd0326aca0, type: 2}
   m_sharedMaterial: {fileID: 7275099180829841276, guid: a771ee4e0fa6f6c48a5db5cd0326aca0, type: 2}
