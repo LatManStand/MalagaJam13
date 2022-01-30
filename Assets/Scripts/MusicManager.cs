@@ -127,6 +127,8 @@ public class MusicManager : MonoBehaviour
     {
         workMusic.volume = 0.0f;
         workMusic.Play();
+        workAmbient.volume = 0.0f;
+        workAmbient.Play();
         float remainingTime = FadeTime;
         while (remainingTime >= 0.0f)
         {
@@ -167,6 +169,15 @@ public class MusicManager : MonoBehaviour
         relaxAmbient.volume = 1.0f;
         workMusic.volume = 0.0f;
         workAmbient.volume = 0.0f;
+        workMusic.Stop();
+        workAmbient.Stop();
+    }
+
+    public void StopAll()
+    {
+        menuMusic.Stop();
+        relaxMusic.Stop();
+        relaxAmbient.Stop();
         workMusic.Stop();
         workAmbient.Stop();
     }
